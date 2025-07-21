@@ -1218,27 +1218,28 @@ body {
   font-size: 6vmin;
   font-weight: bold;
   letter-spacing: 0.5vmin;
-  color: #fffbe7;
-  text-shadow: 0 0 10px #fffbe7, 0 0 30px #ffe066, 0 0 60px #ffe066,
-    0 0 80px #ffe066;
-  animation: flower-title-glow 2s ease-in-out infinite alternate,
+  color: #e6faff;
+  text-shadow: 0 0 8px #e6faff, 0 0 16px #b3eaff, 0 0 32px #b3eaff;
+  background: linear-gradient(90deg, #e6faff 60%, #b3eaff 80%, #e0f7fa 100%);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flower-title-glow-lightblue 2s linear infinite alternate,
     flower-title-fade 1.5s 1s both;
   opacity: 0;
 }
 
-@keyframes flower-title-glow {
+@keyframes flower-title-glow-lightblue {
   0% {
-    text-shadow: 0 0 10px #fffbe7, 0 0 30px #ffe066, 0 0 60px #ffe066,
-      0 0 80px #ffe066;
-    color: #fffbe7;
+    background-position: 0% 0%;
+    text-shadow: 0 0 8px #e6faff, 0 0 16px #b3eaff, 0 0 32px #b3eaff;
   }
   100% {
-    text-shadow: 0 0 30px #fffbe7, 0 0 60px #ffe066, 0 0 100px #ffe066,
-      0 0 120px #ffe066;
-    color: #fff;
+    background-position: 100% 0%;
+    text-shadow: 0 0 16px #e6faff, 0 0 32px #b3eaff, 0 0 48px #b3eaff;
   }
 }
-
 @keyframes flower-title-fade {
   0% {
     opacity: 0;
